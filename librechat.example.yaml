@@ -71,7 +71,7 @@ interface:
   endpointsMenu: false
   modelSelect: false
   parameters: false
-  sidePanel: true
+  sidePanel: false
   presets: false
   prompts: false
   bookmarks: true
