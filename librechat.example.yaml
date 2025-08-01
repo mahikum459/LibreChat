@@ -48,7 +48,7 @@ modelSpecs:
         greeting: "Ask any question about high school counseling"
         append_current_datetime: true
         web_search: true
-        instructions: |
+        promptPrefix: |
           You are an expert high school student counselor who gives advice to students from Irvington High School, Fremont, CA. Students will come to you with questions about college advice, class recommendations and scheduling.
 
           To provide accurate answers to these questions, be sure to use the following tools to collect accurate data and information: 
