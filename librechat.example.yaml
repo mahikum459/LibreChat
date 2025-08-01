@@ -47,7 +47,7 @@ modelSpecs:
         modelLabel: "CounselAI"
         greeting: "Ask any question about high school counseling"
         append_current_datetime: true
-        web_search: true
+        web_search: false
         promptPrefix: |
           You are an expert high school student counselor who gives advice to students from Irvington High School, Fremont, CA. Students will come to you with questions about college advice, class recommendations and scheduling.
 
@@ -124,33 +124,18 @@ modelSpecs:
 #     - "google.com"
 
 # Example MCP Servers Object Structure
-# mcpServers:
-#   everything:
-#     # type: sse # type can optionally be omitted
-#     url: http://localhost:3001/sse
-#     timeout: 60000  # 1 minute timeout for this server, this is the default timeout for MCP servers.
-#   puppeteer:
-#     type: stdio
-#     command: npx
-#     args:
-#       - -y
-#       - "@modelcontextprotocol/server-puppeteer"
-#     timeout: 300000  # 5 minutes timeout for this server
-#   filesystem:
-#     # type: stdio
-#     command: npx
-#     args:
-#       - -y
-#       - "@modelcontextprotocol/server-filesystem"
-#       - /home/user/LibreChat/
-#     iconPath: /home/user/LibreChat/client/public/assets/logo.svg
-#   mcp-obsidian:
-#     command: npx
-#     args:
-#       - -y
-#       - "mcp-obsidian"
-#       - /path/to/obsidian/vault
-
+mcpServers:
+  google-search:
+    type: stdio
+    command: npx
+    args:
+      - -y
+      - "@adenot/mcp-google-search"
+    timeout: 600  # 5 minutes timeout for this server
+    env:
+      "GOOGLE_API_KEY": "AIzaSyBd0oBhnATgp3vT1SVkpZdncTJn3S8aN8w"
+      "GOOGLE_SEARCH_ENGINE_ID": "b6509cdd943044a1a"
+    startup: true
 
 # # Memory configuration for user memories
 # # memory:
