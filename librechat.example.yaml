@@ -33,7 +33,7 @@ interface:
   # temporaryChatRetention: 1
 
 modelSpecs:
-  enforce: false
+  enforce: true
   prioritize: true
   list: 
     - name: "CounselAI"
@@ -44,6 +44,8 @@ modelSpecs:
       preset: 
         endpoint: "openAI"
         model: "gpt-4.1"
+        modelLabel: "CounselAI"
+        greeting: "Ask any question about high school counseling"
         append_current_datetime: true
         web_search: true
         instructions: |
