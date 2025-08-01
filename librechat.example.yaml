@@ -21,7 +21,7 @@ interface:
   # To disable the Agents Capability, see the Agents Endpoint configuration instead.
   fileSearch: false
   endpointsMenu: false
-  modelSelect: true
+  modelSelect: false
   parameters: false
   sidePanel: false
   presets: false
