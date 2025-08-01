@@ -23,13 +23,13 @@ interface:
   # Privacy policy settings
   privacyPolicy:
     externalUrl: 'https://librechat.ai/privacy-policy'
-    openNewTab: true
+    openNewTab: false
 
   # Terms of service
   termsOfService:
     externalUrl: 'https://librechat.ai/tos'
-    openNewTab: true
-    modalAcceptance: true
+    openNewTab: false
+    modalAcceptance: false
     modalTitle: "Terms of Service for LibreChat"
     modalContent: |
       # Terms and Conditions for LibreChat
